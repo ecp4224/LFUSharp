@@ -103,43 +103,5 @@ namespace LFUSharpExample
                 return "" + key;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        static bool DoesThisMakeSense()
-        {
-            LFUIntCache<string> cache = new LFUIntCache<string>();
-            int k1 = cache.Add("testing"); 
-            int k2 = cache.Add("test");
-            cache[55] = "t";
-
-            string test = cache[k1];
-            test = cache[k1];
-            test = cache[55];
-
-            Console.WriteLine(test);
-            Console.WriteLine(cache.LeastFrequentlyUsedObject);
-
-            return false;
-        }
     }
 }
